@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   viewBox="0 0 5 5"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   sodipodi:docname="github-icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="16.733782"
+     inkscape:cx="13.595253"
+     inkscape:cy="20.736496"
+     inkscape:window-width="2560"
+     inkscape:window-height="1476"
+     inkscape:window-x="-12"
+     inkscape:window-y="-12"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 2.5014082,0.47596505 c -1.13929,0 -2.06004001,0.92763005 -2.06004001,2.07539005 a 2.0743333,2.0743333 0 0 0 1.40864001,1.9685 c 0.10239,0.0209 0.1397,-0.0445 0.1397,-0.0995 0,-0.0482 -0.003,-0.21299 -0.003,-0.38471 -0.57283,0.12356 -0.69215,-0.24738 -0.69215,-0.24738 -0.0923,-0.24077 -0.2286,-0.30242 -0.2286,-0.30242 -0.18786,-0.127 0.0135,-0.127 0.0135,-0.127 0.20823,0.0135 0.3175,0.21299 0.3175,0.21299 0.18389,0.31591 0.48075,0.22675 0.60008,0.17171 0.0169,-0.13414 0.0714,-0.22674 0.12964,-0.27834 -0.4572,-0.0482 -0.93795,-0.22675 -0.93795,-1.02394 0,-0.22674 0.082,-0.41222 0.21167,-0.55668 -0.0206,-0.0516 -0.0923,-0.26458 0.0204,-0.5498 0,0 0.17384,-0.055 0.56621,0.21299 a 1.984375,1.984375 0 0 1 0.51488,-0.0688 c 0.17383,0 0.35137,0.0243 0.51488,0.0688 0.39238,-0.26803 0.56621,-0.21299 0.56621,-0.21299 0.11271,0.28522 0.041,0.49821 0.0206,0.5498 0.13282,0.14446 0.2114,0.32994 0.2114,0.55668 0,0.79719 -0.48101,0.97235 -0.94139,1.02394 0.0751,0.0653 0.1397,0.18891 0.1397,0.38471 0,0.27834 -0.003,0.50165 -0.003,0.57044 0,0.055 0.0376,0.12038 0.1397,0.0998 a 2.0743333,2.0743333 0 0 0 1.40864,-1.96877 c 0.003,-1.14776 -0.92075,-2.07539005 -2.05661,-2.07539005"
+       clip-rule="evenodd"
+       id="path7"
+ />
+  </g>
+</svg>
