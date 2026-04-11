@@ -1,0 +1,21 @@
+.aboutMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lastUpdated {
+  margin-bottom: 10px;
+
+  color: color-mix(in srgb, var(--text), black);
+}
+
+.mainText {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+  
+  font-size: 36px;
+  margin: 12px 0;
+}

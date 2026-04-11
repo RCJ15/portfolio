@@ -3,7 +3,9 @@
   width: 100%;
   color: white;
   text-align: center;
-  padding: 15px 0;
+  padding: 15px;
   background-color: black;
   box-shadow: var(--shadowUp);
+
+  height: calc(auto + 100vh);
 }

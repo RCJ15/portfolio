@@ -12,96 +12,155 @@
 
   .topRow {
     display: flex;
-    justify-content: center;
+    align-items: center;
 
-    width: 100%;
-    height: 40px;
+    gap: 10px;
 
     margin-top: 10px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    margin-bottom: 15px;
   }
 
   .left {
-    position: absolute;
-    left: 10px;
 
-    display: grid;
+    display: flex;
 
     gap: 5px;
+  }
+
+  .right {
+
+    display: flex;
+
+    gap: 5px;
+  }
+
+  .navigationTextActive,
+  .navigationText {
+    font-size: 16px;
+    color: var(--text);
+
+    border-radius: 5px;
+    border: 2px solid transparent;
+    border-color: var(--border);
+    padding: 2px 5px;
+
+    cursor: pointer;
+
+    transition: scale 0.3s, border-color 0.1s;
+
+    &:hover {
+      scale: 1.05;
+    }
+
+    &:active {
+      scale: 1.1;
+
+      transition: scale 0.1s, border-color 0.1s;
+    }
+  }
+
+  .navigationTextActive {
+    color: white;
+    border-color: var(--text);
+    text-decoration: underline;
+
+    &:active {
+      border-color: white;
+    }
+  }
+
+  .linkedinIcon,
+  .clickableIcon,
+  .icon {
+    width: 30px;
+    height: 30px;
+
+    fill: currentColor;
+    color: var(--text);
+  }
+  
+  .linkedinIcon,
+  .clickableIcon {
+    cursor: pointer;
+
+    transition: color 0.2s, scale 0.2s;
+
+    &:hover {
+      scale: 1.1;
+      color: white;
+    }
+
+    &:active {
+      scale: 1.3;
+      color: white;
+
+      transition: color 0.1s, scale 0.1s;
+    }
+  }
+
+  .linkedinIcon {
+    width: 28px;
+    width: 28px;
+  }
+
+  .mail {
+    display: inline-flex;
+    justify-content: center;
+    cursor: pointer;
+
+    transition: color 0.3s, scale 0.3s;
+
+    gap: 5px;
+
+    &:hover {
+      scale: 1.05;
+      color: #93D2FF;
+      text-decoration: underline;
+    }
+
+    &:active {
+      scale: 1.1;
+      color: #0095ff;
+
+      transition: color 0.1s, scale 0.1s;
+    }
     
-    .row {
-      width: 100%;
-      display: flex;
-      align-items: stretch;
-
-      gap: 10px;
-    }
-
-    .mailIcon,
-    .icon {
-      width: 30px;
-      height: 30px;
-
-      fill: currentColor;
-      color: var(--text);
-      cursor: pointer;
-
-      transition: color 0.2s, scale 0.2s;
-
-      &:hover {
-        scale: 1.1;
-        color: white;
-      }
-
-      &:active {
-        scale: 1.3;
-        color:white;
-
-        transition: color 0.1s, scale 0.1s;
-      }
-    }
-
     .mailIcon {
       width: 25px;
       height: 25px;
+      
+      fill: currentColor;
+      color: inherit;
     }
 
     .link {
       font-size: 16px;
-      transition: color 0.2s, font-size 0.2s;
       text-align: center;
-      cursor: pointer;
-
-      &:hover {
-        font-size: 17px;
-        color: #93D2FF;
-
-        text-decoration: underline;
-      }
+      text-decoration: inherit;
     }
   }
 
-  .right {
-    position: absolute;
-    right: 10px;
-  }
-    
   .name {
-    position: absolute;
-    left: 100px;
-    right: 100px;
+    flex-grow: 1;
+
     height: 100%;
     font-family: var(--heading);
     font-weight: 500;
     color: var(--text-h);
     font-size: 32px;
     white-space: nowrap;
-    pointer-events: none;
   }
 
+  /*
   .pretentiousQuote {
     font-style: italic;
     height: 40px;
   }
+  */
 }
 
 #visible {
@@ -126,9 +185,117 @@
   transition: inherit;
 }
 
+/*
+.title {
+  font-size: 16px;
+  height: 35px;
+  width: min-content;
+  border: 2px solid transparent;
+  border-color: rgb(34, 35, 44);
+  border-radius: 6px;
+  background-color: #18191f;
+  gap: 4px;
+
+  padding: 0px 10px;
+
+  line-height: 14px;
+
+  white-space: nowrap;
+  
+  display: flex;
+  justify-self: center;
+  align-items: center;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+
+    min-width: 20px;
+    min-height: 20px;
+
+    fill: currentColor;
+    color: var(--text);
+  }
+}
+*/
+
+.titles {
+  gap: 8px;
+  padding-bottom: 10px;
+
+  display: flex;
+  justify-content: center;
+
+  .musicIcon,
+  .icon {
+    width: 20px;
+    height: 20px;
+
+    min-width: 20px;
+    min-height: 20px;
+
+    fill: currentColor;
+    color: inherit;
+  }
+
+  .musicIcon {
+    width: 16px;
+    height: 16px;
+
+    min-width: 16px;
+    min-height: 16px;
+  }
+
+  .gameDeveloperTitle,
+  .soundDesignerTitle,
+  .title {
+    font-size: 16px;
+    width: auto;
+    height: 26px;
+    border: 2px solid transparent;
+
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0px 5px;
+
+    line-height: 14px;
+
+    white-space: nowrap;
+
+    transition: scale 0.2s;
+
+    &:hover {
+      scale: 1.05;
+    }
+  }
+
+  .gameDeveloperTitle {
+    color: rgba(255, 192, 153, 1);
+    background-color: rgba(255, 192, 153, 0.1);
+    border-color: rgba(255, 192, 153, 0.15);
+  }
+
+  .soundDesignerTitle {
+    color: rgba(153, 197, 255, 1);
+    background-color: rgba(153, 197, 255, 0.1);
+    border-color: rgba(153, 197, 255, 0.15);
+  }
+
+  .titleSeperator {
+    width: 2px;
+    height: 30px;
+    border-radius: 2px;
+    align-self: center;
+    background-color: var(--text);
+  }
+}
+
+/*
 .titles {
   width: calc(100% - 20px);
-  
+
   border-radius: 5px;
   gap: 8px;
   padding-bottom: 10px;
@@ -136,7 +303,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+
   .musicIcon,
   .icon {
     width: 20px;
@@ -156,7 +323,7 @@
     min-width: 16px;
     min-height: 16px;
   }
-  
+
   .title {
     font-size: 16px;
     width: auto;
@@ -168,7 +335,7 @@
     align-items: center;
     gap: 4px;
     padding: 0px 5px;
-    
+
     line-height: 14px;
   }
 
@@ -180,3 +347,4 @@
     background-color: var(--text);
   }
 }
+*/
