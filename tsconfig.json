@@ -9,5 +9,9 @@
     }
   ],
   "include": [
-    "src"  ]
+    "src", "vite-env.d.ts"  ],
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false
+  }
 }

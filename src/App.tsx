@@ -13,12 +13,13 @@ function App() {
     <div className="body">
 			<Tooltip id="tooltip" />
       <Navbar/>
-      
+
       <div className="main">
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />
         </Routes>
+      
       </div>
 
       <Footer/>

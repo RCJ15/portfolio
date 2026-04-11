@@ -6,12 +6,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/portfolio/',
   plugins: [
-    react(),
-    svgr({
-      svgrOptions: {
-        icon: true,
-      }
-    })
+    svgr({ include: '**/*.svg?react' }),
+    react()
   ],
   build: {
     outDir: 'dist'

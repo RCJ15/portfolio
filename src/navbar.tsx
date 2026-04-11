@@ -2,19 +2,7 @@ import { useRef, useState, useEffect, useLayoutEffect } from 'react';
 import { useNavigate, useLocation } from "react-router-dom"
 import "./Navbar.css"
 
-import GithubIcon from "/icon/github.svg";
-import ItchIcon from "/icon/itch.svg";
-import LinkedinIcon from "/icon/linkedin.svg";
-import CvIcon from "/icon/cv.svg";
-import MailIcon from "/icon/mail.svg";
-import UnityIcon from "/icon/unity.svg";
-import UnrealIcon from "/icon/unreal.svg";
-import MusicIcon from "/icon/music.svg";
-/*
-import GamingIcon from "/icon/gaming.svg";
-import ProgrammerIcon from "/icon/programmer.svg";
-import StarIcon from "/icon/star.svg";
-*/
+import Icon from "./Icon"
 
 function NavigationText({ destination, text }: { destination: string; text: string }) {
 	const location = useLocation();
@@ -35,14 +23,12 @@ function ClickableIcon({ link, icon, tooltip, className = "clickableIcon" }: { l
 	};
 
 	return (
-		<>
-			<svg className={className}
+		<Icon
+			src={icon}
+			className={className}
 			onClick={openLink}
-			data-tooltip-id="tooltip"
-			data-tooltip-content={tooltip}>
-				<use href={icon}/>
-			</svg>
-		</>
+			tooltip={tooltip}
+		/>
 	);
 }
 
@@ -98,83 +84,85 @@ const Navbar = () => {
 						<div className='left'>
 							<ClickableIcon
 								link="https://github.com/RCJ15"
-								icon={GithubIcon}
+								icon="github"
 								tooltip='Github' />
 
 							<ClickableIcon
 								link="https://rcj15.itch.io"
-								icon={ItchIcon}
+								icon="itch"
 								tooltip='Itch.io' />
 
 							<ClickableIcon
 								link="https://www.linkedin.com/in/ruben-jervinge/"
-								icon={LinkedinIcon}
+								icon="linkedin"
 								tooltip='LinkedIn'
 								className='linkedinIcon' />
 
 							<ClickableIcon
 								link="cv.pdf"
-								icon={CvIcon}
+								icon="cv"
 								tooltip='My resume' />
-
 						</div>
 
-						<div className='name'>Ruben Jervinge</div>
+					<div className='name'>Ruben Jervinge</div>
 
-						<div className='right'>
-							<NavigationText destination="/" text="Home" />
-							<NavigationText destination="/about/" text="About" />
-						</div>
+					<div className='right'>
+						<NavigationText destination="/" text="Home" />
+						<NavigationText destination="/about/" text="About" />
+					</div>
+				</div>
+
+				{/*
+				<div className="pretentiousQuote">
+					{width >= 690 ? '"Lorem ipsum dolor sit amet"' : ( width >= 570 ? '"Lorem Ipsum"' : "")}
+				</div>
+				*/}
+
+				<div className='titles'>
+
+					<div className='gameDeveloperTitle'
+						data-tooltip-id="tooltip"
+						data-tooltip-content="Unity & Unreal Engine"
+					>
+
+						<Icon src="unity" className="icon" />
+						<Icon src="unreal" className="icon" />
+						Game Developer
 					</div>
 
 					{/*
-					<div className="pretentiousQuote">
-						{width >= 690 ? '"Lorem ipsum dolor sit amet"' : ( width >= 570 ? '"Lorem Ipsum"' : "")}
+					<div className='title'>
+						<svg className="icon">
+							<use href={ProgrammerIcon}></use>
+						</svg>
+						Programmer
 					</div>
 					*/}
 
-					<div className='titles'>
-
-						<div className='gameDeveloperTitle'
-							data-tooltip-id="tooltip"
-							data-tooltip-content="Unity & Unreal Engine"
-						>
-
-							<img className="icon" src={UnityIcon} />
-							<img className="icon" src={UnrealIcon} />
-							Game Developer</div>
-
-						{/*
-						<div className='title'>
-							<svg className="icon">
-								<use href={ProgrammerIcon}></use>
-							</svg>
-							Programmer</div>
-							*/}
-
-						<div className='soundDesignerTitle'
-							data-tooltip-id="tooltip"
-							data-tooltip-content="Audacity & FL Studio"
-						>
-							<img className="icon" src={MusicIcon} />
-							Sound Designer/Composer</div>
-
-						{/*
-						<div className='title'>
-							<svg className="icon">
-								<use href={StarIcon}></use>
-							</svg>
-							VFX Artist</div>
-							*/}
+					<div className='soundDesignerTitle'
+						data-tooltip-id="tooltip"
+						data-tooltip-content="Audacity & FL Studio"
+					>
+						<Icon src="music" className="icon" />
+						Sound Designer/Composer
 					</div>
 
+					{/*
+					<div className='title'>
+						<svg className="icon">
+							<use href={StarIcon}></use>
+						</svg>
+						VFX Artist
+					</div>
+					*/}
+				</div>
 
-					<div className="mail"
-						onClick={openMail}
-						data-tooltip-id="tooltip"
-						data-tooltip-content="Contact me!"
+				<div className="mail"
+					onClick={openMail}
+					data-tooltip-id="tooltip"
+					data-tooltip-content="Contact me!"
 					>
-						<img className="icon" src={MailIcon} />
+						<Icon src="mail" className="icon" />
 						<div className='link'>
 							ruben.jervinge@gmail.com
 						</div>
