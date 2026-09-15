@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import './About.css'
+import Button from "../Button";
 
 function About() {
   const navigate = useNavigate();
@@ -28,13 +29,12 @@ function About() {
         <p className="textBlock">{text}</p>
         <p className="textBlock">{text2}</p>
       </div>
-      <button className="button"
+      <Button
         onClick={handleClick}
-        data-tooltip-id="tooltip"
-        data-tooltip-content="Go back to the home page"
+        tooltip="Go back to the home page"
       >
-        Go Back
-      </button>
+        Go back
+      </Button>
     </>
   )
 }

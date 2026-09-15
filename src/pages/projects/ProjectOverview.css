@@ -1,0 +1,15 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+
+  gap: 30px;
+  
+  .button {
+    display: flex;
+
+    gap: 5px;
+  }
+}

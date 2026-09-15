@@ -1,0 +1,82 @@
+
+.infoLine {
+
+  --svg-shadow: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+  
+  display: flex;
+  flex-wrap: nowrap;
+
+  height: 25px;
+
+  margin-bottom: 8px;
+
+  .clock,
+  .side {
+    display: flex;
+    gap: 5px;
+
+    justify-content: baseline;
+  }
+
+  .clock {
+    color: white;
+  }
+
+  .date {
+    flex-grow: 1;
+    font-size: 20px;
+    font-weight: 450;
+    text-shadow: var(--shadow);
+
+    color: white;
+    pointer-events: none;
+  }
+
+  .icon {
+    width: auto;
+    height: 25px;
+
+    fill: currentColor;
+
+    filter: var(--svg-shadow);
+  }
+
+  .text {
+    pointer-events: none;
+    text-shadow: var(--shadow);
+  }
+
+  .teamSize {
+    position: relative;
+
+    color: orange;
+
+    .text {
+      left: 0px;
+      top: -5px;
+      width: 100%;
+
+      position: absolute;
+      font-weight: bold;
+      align-self: center;
+
+      font-size: 12px;
+      letter-spacing: -0.7px;
+
+      color: var(--code-bg);
+      text-shadow: none;
+    }
+  }
+}
+
+.seperator {
+  height: 2px;
+
+  margin-bottom: 5px;
+
+  background-color: var(--text);
+
+  border-radius: 5px;
+
+  box-shadow: var(--shadow);
+}

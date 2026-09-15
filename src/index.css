@@ -139,7 +139,6 @@ code {
   color: var(--accent);
   background: var(--accent-bg);
   border: 2px solid transparent;
-  margin-bottom: 24px;
   transition: color 0.3s, border-color 0.3s, scale 0.3s, border 0.3s, border-radius 0.3s;
   
   cursor: pointer;
@@ -167,7 +166,8 @@ code {
 }
 
 .textBlock {
-  max-width: 600px;
+  display: flex;
+
   text-align: left;
   background-color: rgba(255, 255, 255, 0.05);
 
@@ -181,4 +181,7 @@ code {
   margin-bottom: 10px;
 
   white-space: pre-line;
+
+  align-items: center;
+  justify-content: center;
 }

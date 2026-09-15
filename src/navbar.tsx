@@ -104,13 +104,15 @@ const Navbar = () => {
 								tooltip='My resume' />
 						</div>
 
-					<div className='name'>Ruben Jervinge</div>
+					<div className='name'>{width >= 600 ? "Ruben Jervinge" : ""}</div>
 
 					<div className='right'>
 						<NavigationText destination="/" text="Home" />
 						<NavigationText destination="/about/" text="About" />
 					</div>
 				</div>
+
+				<div>{width < 600 && <div className='name'>Ruben Jervinge<br/><br/></div>}</div>
 
 				{/*
 				<div className="pretentiousQuote">
@@ -122,12 +124,25 @@ const Navbar = () => {
 
 					<div className='gameDeveloperTitle'
 						data-tooltip-id="tooltip"
-						data-tooltip-content="Unity & Unreal Engine"
+						data-tooltip-content="Unity"
 					>
 
 						<Icon src="unity" className="icon" />
+
+						{/* 
 						<Icon src="unreal" className="icon" />
+						*/}
 						Game Developer
+					</div>
+
+					{/* KIND OF TEMPORARY */}
+					<div className='soundDesignerTitle'
+						data-tooltip-id="tooltip"
+						data-tooltip-content="C#, C++, Python, Java, SQL, CSS & React"
+					>
+
+						<Icon src="programmer" className="icon" />
+						Programmer
 					</div>
 
 					{/*
@@ -139,6 +154,7 @@ const Navbar = () => {
 					</div>
 					*/}
 
+					{/*
 					<div className='soundDesignerTitle'
 						data-tooltip-id="tooltip"
 						data-tooltip-content="Audacity & FL Studio"
@@ -146,6 +162,7 @@ const Navbar = () => {
 						<Icon src="music" className="icon" />
 						Sound Designer/Composer
 					</div>
+					*/}
 
 					{/*
 					<div className='title'>

@@ -4,8 +4,8 @@ function Footer() {
   return (
     <>
       <div className='footer'>
-        <p>This is the footer</p>
-        <p>Tet is a tetting teter of tettington</p>
+        <div>UNDER CONSTRUCTION!</div>
+        <div>Website by Ruben Jervinge using React and Vite - 2026</div>
       </div>
     </>
   )
