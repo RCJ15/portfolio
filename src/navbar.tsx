@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useLayoutEffect } from 'react';
+import { useRef, useState, useLayoutEffect } from 'react';
 import { useNavigate, useLocation } from "react-router-dom"
 import "./Navbar.css"
 
@@ -33,10 +33,11 @@ function ClickableIcon({ link, icon, tooltip, className = "clickableIcon" }: { l
 }
 
 const Navbar = () => {
-	const [width, setWidth] = useState(0)
+	//const [width, setWidth] = useState(0)
 	const [height, setHeight] = useState(0)
-	const navbar = useRef<HTMLDivElement>(null);
+	const topRow = useRef<HTMLDivElement>(null);
 
+	/*
 	const [visible, setVisible] = useState(true);
 	const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -48,14 +49,16 @@ const Navbar = () => {
 		}
 		setLastScrollY(window.scrollY);
 	};
+	*/
 
-	function updateNavbarSize() {
-		if (navbar.current) {
-			setWidth(navbar.current.clientWidth);
-			setHeight(navbar.current.clientHeight);
+	function updateTopRowSize() {
+		if (topRow.current) {
+			// setWidth(topRow.current.clientWidth);
+			setHeight(topRow.current.clientHeight);
 		}
 	}
 
+	/*
 	useEffect(() => {
 		window.addEventListener('scroll', controlNavbar);
 
@@ -63,24 +66,20 @@ const Navbar = () => {
 			window.removeEventListener('scroll', controlNavbar);
 		}
 	}, [lastScrollY]);
+	*/
 
 	useLayoutEffect(() => {
-		updateNavbarSize();
-		window.addEventListener("resize", updateNavbarSize);
-		return () => window.removeEventListener("resize", updateNavbarSize);
+		updateTopRowSize();
+		window.addEventListener("resize", updateTopRowSize);
+		return () => window.removeEventListener("resize", updateTopRowSize);
 	}, [])
-
-	const openMail = () => {
-		window.location.href = `mailto:ruben.jervinge@gmail.com?subject=Hello!&body=Lorem ipsum dolor sit amet`;
-	};
 
 	return (
 		<>
 			<div className="navbar">
-				<div ref={navbar} id={visible ? "visible" : "hidden"} style={{
-					top: `${visible ? `0px` : `calc(${height}px * -1 - 30px)`}`
-				}}>
-					<div className="topRow">
+				{/* <div className="background"/> */}
+				<div className="topRow" ref={topRow}>
+					<div className='limiter'>
 						<div className='left'>
 							<ClickableIcon
 								link="https://github.com/RCJ15"
@@ -95,8 +94,12 @@ const Navbar = () => {
 							<ClickableIcon
 								link="https://www.linkedin.com/in/ruben-jervinge/"
 								icon="linkedin"
-								tooltip='LinkedIn'
-								className='linkedinIcon' />
+								tooltip='LinkedIn' />
+
+							<ClickableIcon
+								link="mailto:ruben.jervinge@gmail.com"
+								icon="mailButton"
+								tooltip='Send me a mail' />
 
 							<ClickableIcon
 								link="cv.pdf"
@@ -104,93 +107,55 @@ const Navbar = () => {
 								tooltip='My resume' />
 						</div>
 
-					<div className='name'>{width >= 600 ? "Ruben Jervinge" : ""}</div>
-
-					<div className='right'>
-						<NavigationText destination="/" text="Home" />
-						<NavigationText destination="/about/" text="About" />
-					</div>
-				</div>
-
-				<div>{width < 600 && <div className='name'>Ruben Jervinge<br/><br/></div>}</div>
-
-				{/*
-				<div className="pretentiousQuote">
-					{width >= 690 ? '"Lorem ipsum dolor sit amet"' : ( width >= 570 ? '"Lorem Ipsum"' : "")}
-				</div>
-				*/}
-
-				<div className='titles'>
-
-					<div className='gameDeveloperTitle'
-						data-tooltip-id="tooltip"
-						data-tooltip-content="Unity"
-					>
-
-						<Icon src="unity" className="icon" />
-
-						{/* 
-						<Icon src="unreal" className="icon" />
-						*/}
-						Game Developer
+					<div className='fill'>
+						<div className='name'>Ruben Jervinge</div>
 					</div>
 
-					{/* KIND OF TEMPORARY */}
-					<div className='soundDesignerTitle'
-						data-tooltip-id="tooltip"
-						data-tooltip-content="C#, C++, Python, Java, SQL, CSS & React"
-					>
-
-						<Icon src="programmer" className="icon" />
-						Programmer
-					</div>
-
-					{/*
-					<div className='title'>
-						<svg className="icon">
-							<use href={ProgrammerIcon}></use>
-						</svg>
-						Programmer
-					</div>
-					*/}
-
-					{/*
-					<div className='soundDesignerTitle'
-						data-tooltip-id="tooltip"
-						data-tooltip-content="Audacity & FL Studio"
-					>
-						<Icon src="music" className="icon" />
-						Sound Designer/Composer
-					</div>
-					*/}
-
-					{/*
-					<div className='title'>
-						<svg className="icon">
-							<use href={StarIcon}></use>
-						</svg>
-						VFX Artist
-					</div>
-					*/}
-				</div>
-
-				<div className="mail"
-					onClick={openMail}
-					data-tooltip-id="tooltip"
-					data-tooltip-content="Contact me!"
-					>
-						<Icon src="mail" className="icon" />
-						<div className='link'>
-							ruben.jervinge@gmail.com
+						<div className='right'>
+							<NavigationText destination="/" text="Home" />
+							<NavigationText destination="/about/" text="About" />
 						</div>
 					</div>
 
 				</div>
-			</div>
-			<div style={{
-				margin: `calc(${height}px / 2)`
-			}}>
-			</div>
+
+				<div style={{
+					margin: `calc(${height}px)`
+				}} />
+
+				<div className='titles'>
+
+					<div className='yellowTitle'
+						data-tooltip-id="tooltip"
+						data-tooltip-content=""
+					>
+
+						<Icon src="music" className="icon" />
+
+						Game Composer
+					</div>
+
+					<div className='blueTitle'
+						data-tooltip-id="tooltip"
+						data-tooltip-content=""
+					>
+
+						<Icon src="star" className="icon" />
+						Sound Designer
+					</div>
+
+					<div className='greenTitle'
+						data-tooltip-id="tooltip"
+						data-tooltip-content=""
+					>
+
+						<Icon src="programmer" className="icon" />
+						Audio Programmer
+					</div>
+
+				</div>
+
+			</div >
 		</>
 	);
 };

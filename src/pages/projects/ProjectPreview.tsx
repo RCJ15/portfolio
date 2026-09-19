@@ -3,20 +3,14 @@ import { useState } from "react";
 import "./ProjectPreview.css"
 
 import Icon from "../../Icon";
-import InfoLine from "./InfoLine";
 import ImageWithChildren from "../../ImageWithChildren";
 
 type Props = {
   title: string;
-  date: string;
 
   subtitle?: string;
   subtitleIcon?: string;
   subtitleColor?: string;
-
-  teamSize: number;
-  timeTaken: string;
-  badges?: React.ReactNode;
 
   img: string;
   imgOverlayText?: string;
@@ -29,9 +23,7 @@ type Props = {
 
 function ProjectPreview({
   title,
-  date,
   subtitle, subtitleIcon, subtitleColor,
-  teamSize, timeTaken, badges,
   img, imgOverlayText, imgClickEvent, imgAlt,
   text,
   children
@@ -82,13 +74,6 @@ function ProjectPreview({
             <div>{imgOverlayText}</div>
           </div>
         </ImageWithChildren>
-
-        <InfoLine
-          date={date}
-          teamSize={teamSize}
-          timeTaken={timeTaken}
-          badges={badges}
-        />
 
         {/* PROJECT TEXT */}
         <div className="projectText">

@@ -9,6 +9,7 @@ import unity from "./assets/icon/unity.svg?react";
 import unreal from "./assets/icon/unreal.svg?react";
 import music from "./assets/icon/music.svg?react";
 import mail from "./assets/icon/mail.svg?react";
+import mailButton from "./assets/icon/mailButton.svg?react";
 import gaming from "./assets/icon/gaming.svg?react";
 import programmer from "./assets/icon/programmer.svg?react";
 import star from "./assets/icon/star.svg?react";
@@ -30,6 +31,7 @@ const iconComponents: Record<string, React.FunctionComponent<React.SVGProps<SVGS
   "unreal": unreal,
   "music": music,
   "mail": mail,
+  "mailButton": mailButton,
   "gaming": gaming,
   "programmer": programmer,
   "star": star,

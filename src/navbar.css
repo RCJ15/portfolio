@@ -1,89 +1,126 @@
 .navbar {
+  top: -500px;
+
   --height: 100px;
   --bg: black;
 
   width: 100%;
   z-index: 1000;
 
+  background-color: var(--bg);
   box-shadow: var(--shadow);
 
-  transition:
-    top 0.5s;
-
   .topRow {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+
     display: flex;
     align-items: center;
 
+    background-color: var(--bg);
+    box-shadow: inherit;
+
     gap: 10px;
 
-    margin-top: 10px;
+    padding-top: 10px;
 
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-bottom: 10px;
 
-    margin-bottom: 15px;
-  }
+    .limiter {
+      position: relative;
+      top: 0px;
+      bottom: 0px;
+      left: 50%;
+      transform: translate(-50%, 0);
 
-  .left {
+      width: 100%;
+      max-width: 750px;
 
-    display: flex;
+      display: flex;
 
-    gap: 5px;
-  }
-
-  .right {
-
-    display: flex;
-
-    gap: 5px;
-  }
-
-  .navigationTextActive,
-  .navigationText {
-    font-size: 16px;
-    color: var(--text);
-
-    border-radius: 5px;
-    border: 2px solid transparent;
-    border-color: var(--border);
-    padding: 2px 5px;
-
-    cursor: pointer;
-
-    transition: scale 0.3s, border-color 0.1s;
-
-    &:hover {
-      scale: 1.05;
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
-    &:active {
-      scale: 1.1;
+    .left {
+      display: flex;
 
-      transition: scale 0.1s, border-color 0.1s;
+      gap: clamp(1px, 0.5vw, 5px);
+    }
+
+    .right {
+      display: flex;
+
+      gap: 5px;
+    }
+
+    .navigationTextActive,
+    .navigationText {
+      font-size: 16px;
+      color: var(--text);
+
+      border-radius: 5px;
+      border: 2px solid transparent;
+      border-color: var(--border);
+      padding: 2px 5px;
+
+      cursor: pointer;
+
+      transition: scale 0.3s, border-color 0.1s;
+
+      &:hover {
+        scale: 1.05;
+      }
+
+      &:active {
+        scale: 1.1;
+
+        transition: scale 0.1s, border-color 0.1s;
+      }
+    }
+
+    .navigationTextActive {
+      color: white;
+      border-color: var(--text);
+      text-decoration: underline;
+
+      &:active {
+        border-color: white;
+      }
+    }
+
+    .fill {
+      display: flex;
+      justify-content: center;
+
+      flex-grow: 1;
+      height: 100%;
+    }
+
+    .name {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      font-family: var(--heading);
+      font-weight: 500;
+      color: var(--text-h);
+      font-size: clamp(5px, 5vw, 32px);
+
+      white-space: nowrap;
     }
   }
 
-  .navigationTextActive {
-    color: white;
-    border-color: var(--text);
-    text-decoration: underline;
-
-    &:active {
-      border-color: white;
-    }
-  }
-
-  .linkedinIcon,
   .clickableIcon,
   .icon {
-    width: 30px;
-    height: 30px;
+    width: clamp(5px, 5vw, 30px);
+    height: clamp(5px, 5vw, 30px);
 
     fill: currentColor;
     color: var(--text);
   }
-  
-  .linkedinIcon,
+
   .clickableIcon {
     cursor: pointer;
 
@@ -101,123 +138,7 @@
       transition: color 0.1s, scale 0.1s;
     }
   }
-
-  .linkedinIcon {
-    width: 28px;
-    width: 28px;
-  }
-
-  .mail {
-    display: inline-flex;
-    justify-content: center;
-    cursor: pointer;
-
-    transition: color 0.3s, scale 0.3s;
-
-    gap: 5px;
-
-    &:hover {
-      scale: 1.05;
-      color: #93D2FF;
-      text-decoration: underline;
-    }
-
-    &:active {
-      scale: 1.1;
-      color: #0095ff;
-
-      transition: color 0.1s, scale 0.1s;
-    }
-    
-    .mailIcon {
-      width: 25px;
-      height: 25px;
-      
-      fill: currentColor;
-      color: inherit;
-    }
-
-    .link {
-      font-size: 16px;
-      text-align: center;
-      text-decoration: inherit;
-    }
-  }
-
-  .name {
-    flex-grow: 1;
-
-    height: 100%;
-    font-family: var(--heading);
-    font-weight: 500;
-    color: var(--text-h);
-    font-size: 32px;
-    white-space: nowrap;
-  }
-
-  /*
-  .pretentiousQuote {
-    font-style: italic;
-    height: 40px;
-  }
-  */
 }
-
-#visible {
-  position: fixed;
-  left: 0px;
-
-  background-color: var(--bg);
-
-  box-shadow: inherit;
-  width: inherit;
-  transition: inherit;
-
-}
-
-#hidden {
-  position: fixed;
-  left: 0px;
-  background-color: var(--bg);
-
-  box-shadow: inherit;
-  width: inherit;
-  transition: inherit;
-}
-
-/*
-.title {
-  font-size: 16px;
-  height: 35px;
-  width: min-content;
-  border: 2px solid transparent;
-  border-color: rgb(34, 35, 44);
-  border-radius: 6px;
-  background-color: #18191f;
-  gap: 4px;
-
-  padding: 0px 10px;
-
-  line-height: 14px;
-
-  white-space: nowrap;
-  
-  display: flex;
-  justify-self: center;
-  align-items: center;
-
-  .icon {
-    width: 20px;
-    height: 20px;
-
-    min-width: 20px;
-    min-height: 20px;
-
-    fill: currentColor;
-    color: var(--text);
-  }
-}
-*/
 
 .titles {
   gap: 8px;
@@ -247,8 +168,9 @@
     min-height: 16px;
   }
 
-  .gameDeveloperTitle,
-  .soundDesignerTitle,
+  .yellowTitle,
+  .blueTitle,
+  .greenTitle,
   .title {
     font-size: 16px;
     width: auto;
@@ -267,77 +189,29 @@
 
     transition: scale 0.2s;
 
+    /*
     &:hover {
       scale: 1.05;
     }
+    */
   }
 
-  .gameDeveloperTitle {
+  .yellowTitle {
     color: rgba(255, 192, 153, 1);
     background-color: rgba(255, 192, 153, 0.1);
     border-color: rgba(255, 192, 153, 0.15);
   }
 
-  .soundDesignerTitle {
+  .blueTitle {
     color: rgba(153, 197, 255, 1);
     background-color: rgba(153, 197, 255, 0.1);
     border-color: rgba(153, 197, 255, 0.15);
   }
-
-  .titleSeperator {
-    width: 2px;
-    height: 30px;
-    border-radius: 2px;
-    align-self: center;
-    background-color: var(--text);
-  }
-}
-
-/*
-.titles {
-  width: calc(100% - 20px);
-
-  border-radius: 5px;
-  gap: 8px;
-  padding-bottom: 10px;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  .musicIcon,
-  .icon {
-    width: 20px;
-    height: 20px;
-
-    min-width: 20px;
-    min-height: 20px;
-
-    fill: currentColor;
-    color: var(--text);
-  }
-
-  .musicIcon {
-    width: 16px;
-    height: 16px;
-
-    min-width: 16px;
-    min-height: 16px;
-  }
-
-  .title {
-    font-size: 16px;
-    width: auto;
-    height: 35px;
-    border: 2px solid transparent;
-    border-radius: 6px;
-    border-color: var(--text);
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 0px 5px;
-
-    line-height: 14px;
+  
+  .greenTitle {
+    color: rgba(153, 255, 197, 1);
+    background-color: rgba(153, 255, 197, 0.1);
+    border-color: rgba(153, 255, 197, 0.15);
   }
 
   .titleSeperator {
@@ -348,4 +222,3 @@
     background-color: var(--text);
   }
 }
-*/

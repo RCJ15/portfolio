@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import { HashRouter } from 'react-router-dom'
 import './index.css'
@@ -8,8 +8,9 @@ const root = createRoot(document.getElementById('root')!);
 root.render(
   <StrictMode>
     <HashRouter>
-
-      <App />
+      <Suspense>
+        <App />
+      </Suspense>
     </HashRouter>
   </StrictMode>
 )

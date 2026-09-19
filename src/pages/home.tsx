@@ -22,10 +22,10 @@ function Home() {
   const gotoAbout = () => goto("/about/");
 
   const introText =
-    `I'm Ruben, a Game Programmer based in Sweden. Currently studying Game Developement at Stockholm University.
-
-    This website is under construction! Will finish this later...
-        `
+    `I'm Ruben, an Audio Programmer based in Sweden. Currently studying Game Development at Stockholm University.
+    
+    Yayaya fill this with info later...
+    `
 
     //I specialize in creating robust developer tools and individual systems that enhance productivity, but I also enjoy working on gameplay features and mechanics.
 

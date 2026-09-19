@@ -35,18 +35,10 @@ function gamesProjectOverview() {
         {/* PORTAL PACKER */}
         <ProjectPreview
           title="Portal Packer"
-          date="2022"
 
           subtitle="1st place winner!"
           subtitleIcon="1st-place"
           subtitleColor="#ffbf58"
-
-          teamSize={1}
-          timeTaken="10 days"
-          badges={<>
-            <Icon src="unity" className="icon" color="white" tooltip="Made with Unity" />
-            <Icon src="c#" className="icon" color="#9B4F97" tooltip="Programmed in C#" />
-          </>}
 
           img={PortalPackerThumb}
           imgClickEvent={portalPackerLink}
@@ -78,18 +70,10 @@ function gamesProjectOverview() {
         {/* BOX BREAK */}
         <ProjectPreview
           title="<BOX_BREAK>"
-          date="2026"
 
           subtitle="Programming-based strategy"
           subtitleIcon="programmer"
           subtitleColor="#4dcf57"
-
-          teamSize={1}
-          timeTaken="20 days"
-          badges={<>
-            <Icon src="unity" className="icon" color="white" tooltip="Made with Unity" />
-            <Icon src="c#" className="icon" color="#9B4F97" tooltip="Programmed in C#" />
-          </>}
 
           img={BoxBreakThumb}
           imgClickEvent={boxBreakLink}
