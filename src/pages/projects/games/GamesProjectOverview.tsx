@@ -40,7 +40,7 @@ function gamesProjectOverview() {
 
         {/* POSTAL PANIC */}
         <ProjectPreview
-          title="Postal Panic"
+          title="Postal Panic!§"
 
           subtitle="My latest and greatest work!"
           subtitleIcon="star"
@@ -66,6 +66,7 @@ function gamesProjectOverview() {
             onClick={postalPanicOstLink}
             tooltip="Listen to the original soundtrack"
           >
+            <Icon src="spotify" className="icon" />
             Soundtrack
           </Button>
 
@@ -89,19 +90,20 @@ function gamesProjectOverview() {
             
             The game received 1st place in the Game Jam results.`}
         >
-          <Button
-            onClick={portalPackerLink}
-            tooltip="Playable directly in the browser!"
-          >
-            <Icon src="itch-other" className="icon" />
-            Play
-          </Button>
 
           <Button
             onClick={portalPackerRoute}
             tooltip="The making of Portal Packer"
           >
             Read more...
+          </Button>
+
+          <Button
+            onClick={portalPackerLink}
+            tooltip="Playable directly in the browser!"
+          >
+            <Icon src="itch-other" className="icon" />
+            Play
           </Button>
 
         </ProjectPreview>
@@ -141,18 +143,18 @@ function gamesProjectOverview() {
         >
 
           <Button
+            onClick={debrisRoute}
+            tooltip="The making of Debris"
+          >
+            Read more...
+          </Button>
+          
+          <Button
             onClick={debrisLink}
             tooltip="Download the game"
           >
             <Icon src="itch-other" className="icon" />
             Play
-          </Button>
-
-          <Button
-            onClick={debrisRoute}
-            tooltip="The making of Debris"
-          >
-            Read more...
           </Button>
 
         </ProjectPreview>

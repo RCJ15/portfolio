@@ -20,6 +20,7 @@ import person from "./assets/icon/person.svg?react";
 import clock from "./assets/icon/clock.svg?react";
 import arrow from "./assets/icon/arrow.svg?react";
 import movie from "./assets/icon/movie.svg?react";
+import spotify from "./assets/icon/spotify.svg?react";
 
 const iconComponents: Record<string, React.FunctionComponent<React.SVGProps<SVGSVGElement>>> = {
   "github": github,
@@ -42,6 +43,7 @@ const iconComponents: Record<string, React.FunctionComponent<React.SVGProps<SVGS
   "clock": clock,
   "arrow": arrow,
   "movie": movie,
+  "spotify": spotify,
 };
 
 type Props = {

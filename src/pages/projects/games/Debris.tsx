@@ -2,6 +2,7 @@ import ProjectPage from "../ProjectPage";
 import TextBlock from "../../../TextBlock";
 import Icon from "../../../Icon";
 import YoutubeEmbed from "../../../YoutubeEmbed";
+import Space from "../../../Space";
 
 function Debris() {
   return (
@@ -23,7 +24,7 @@ function Debris() {
 
           <TextBlock>
             <h2>My Role</h2>
-            <p>I was responsible for creating <b>all</b> of the <b>sounds</b> and <b>music</b> for the game as well as implementing it. I was also one of the <b>gameplay programmers</b>.</p>
+            <p>I worked in a team of 6 where I was responsible for creating <b>all</b> of the <b>sounds</b> and <b>music</b> for the game as well as implementing it. I was also one of the <b>gameplay programmers</b>.</p>
           </TextBlock>
 
         </div>
@@ -33,14 +34,14 @@ function Debris() {
           <TextBlock>
             <h2>Desolate & Lonely</h2>
             <p>The game takes place on a barren earth that is void of any life, with only remnants of humanity left.</p>
-            <br/>
+            <Space/>
             <p>The soundtrack features a lot of wide pads and reverb to reflect the loneliness and scale of the areas.</p>
           </TextBlock>
 
           <TextBlock>
             <h2>Hopeful</h2>
             <p>In the end, there is a hopeful ending and I wanted the games audio to foreshadow this.</p>
-            <br/>
+            <Space/>
             <p>I created a sad yet hopeful melody which I continously used as a leitmotif through the games various areas.</p>
           </TextBlock>
         </div>
@@ -48,14 +49,14 @@ function Debris() {
         <h1>Awards!</h1>
         <TextBlock>
           <p>This game won an award for <b>Best Sound & Music</b>! Here is the entire show (audio award is at 28:48)</p>
-          <br/>
+          <Space/>
           <YoutubeEmbed embedId="rUKj206QFrs" width="560" height="315"></YoutubeEmbed>
         </TextBlock>
         
         <h1>Play the game!</h1>
         <TextBlock>
           <p>The game is up on <b>itch.io</b>!</p>
-          <br/>
+          <Space/>
           <iframe src="https://itch.io/embed/2094226?dark=true" width="552" height="167"><a href="https://rcj15.itch.io/portal-packer">Debris by Minor Tragedies</a></iframe>
         </TextBlock>
       </ProjectPage>

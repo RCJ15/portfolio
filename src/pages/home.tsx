@@ -9,6 +9,8 @@ import Icon from "../Icon";
 import Button from "../Button";
 import YoutubeEmbed from "../YoutubeEmbed";
 import TextBlock from "../TextBlock";
+import Space from "../Space";
+import Mail from "../Mail";
 
 function Home() {
   const navigate = useNavigate();
@@ -45,8 +47,10 @@ function Home() {
         </div>
         <TextBlock style={{maxWidth:"1000px"}}>
           <p>I'm <b>Ruben</b>, a <b>Game Audio Programmer</b> based in Sweden, Stockholm. Currently studying <b>Game Development</b> at <b>Stockholm University</b>.</p>
-          <br/>
+          <Space/>
           <p>I have experience in using various <b>DAWs</b> (such as <b>Reaper</b> and <b>FL Studio</b>) for both <b>sound design</b> and <b>music composition</b>, and I enjoy working on all aspects of game audio, from creating sound effects to implementing complex audio systems via <b>middleware</b> such as <b>FMOD</b>.</p>
+          <Space/>
+          <Mail/>
         </TextBlock>
       </div>
       {/*
@@ -77,7 +81,7 @@ function Home() {
         <Icon src="arrow" className="arrow" />
       </motion.div>
 
-      <br/>
+      <Space/>
 
       <GamesProjectOverview/>
     </>

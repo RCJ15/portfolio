@@ -102,9 +102,9 @@ const Navbar = () => {
 								tooltip='Send me a mail' />
 
 							<ClickableIcon
-								link="cv.pdf"
+								link="https://drive.google.com/file/d/1yFSsYEj_KQSyY6W4Id4uxjpDVPMSUWbK/view?usp=sharing"
 								icon="cv"
-								tooltip='My resume' />
+								tooltip='My CV' />
 						</div>
 
 					<div className='fill'>

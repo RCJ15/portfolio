@@ -1,4 +1,3 @@
-import "./PortalPacker.css";
 import ProjectPage from "../ProjectPage";
 import Icon from "../../../Icon";
 import TextBlock from "../../../TextBlock";
@@ -7,6 +6,7 @@ import Gif1 from "../assets/portalPacker1.gif";
 import Gif2 from "../assets/portalPacker2.gif";
 import Gif3 from "../assets/portalPacker3.gif";
 import Gif4 from "../assets/portalPacker4.gif";
+import Space from "../../../Space";
 
 function PortalPacker() {
   return (
@@ -37,14 +37,14 @@ function PortalPacker() {
           <TextBlock>
             <h2>Hi-tech</h2>
             <p>Since the primary mechanic of the game is a backpack that can create portals, the audio should reflect how futuristic the technology is.</p>
-            <br/>
+            <Space/>
             <p>I achieved this by incorperating synths and pads into a lot of the sound design and music composition of the game.</p>
           </TextBlock>
 
           <TextBlock>
             <h2>Abandoned</h2>
             <p>Every aspect of the sound should give the player the feeling the area they are inside has been long abandoned.</p>
-            <br/>
+            <Space/>
             <p>A lot of synths in the soundtrack are intentionally old and muted (via EQ) to make them sound "abandoned".</p>
           </TextBlock>
         </div>
@@ -91,7 +91,7 @@ function PortalPacker() {
         <h1>Play the game!</h1>
         <TextBlock>
           <p>The game is up on <b>itch.io</b>! Playable directly in browser, no download required!</p>
-          <br/>
+          <Space/>
           <iframe src="https://itch.io/embed/1747670?dark=true" width="552" height="167"><a href="https://rcj15.itch.io/portal-packer">Portal Packer by RCJ15</a></iframe>
         </TextBlock>
       </ProjectPage>
