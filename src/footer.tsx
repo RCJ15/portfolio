@@ -5,7 +5,7 @@ function Footer() {
   return (
     <>
       <div className='footer'>
-        <div>Website by Ruben Jervinge using React and Vite - 2026</div>
+        <div>Ruben Jervinge - 2026</div>
         <Mail/>
       </div>
     </>

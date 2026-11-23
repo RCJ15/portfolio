@@ -112,8 +112,8 @@ const Navbar = () => {
 					</div>
 
 						<div className='right'>
-							<NavigationText destination="/" text="Home" />
-							<NavigationText destination="/about/" text="About" />
+							<NavigationText destination="/" text="Main page" />
+							{/*<NavigationText destination="/about/" text="About" />*/}
 						</div>
 					</div>
 
@@ -123,6 +123,7 @@ const Navbar = () => {
 					margin: `calc(${height}px)`
 				}} />
 
+				{/*
 				<div className='titles'>
 
 					<div className='yellowTitle'
@@ -154,7 +155,8 @@ const Navbar = () => {
 					</div>
 
 				</div>
-
+				*/}
+				
 			</div >
 		</>
 	);

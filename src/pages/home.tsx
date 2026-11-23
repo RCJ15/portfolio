@@ -7,6 +7,8 @@ import './Home.css'
 import Selfie from "../assets/selfie.png"
 import Icon from "../Icon";
 import Button from "../Button";
+import YoutubeEmbed from "../YoutubeEmbed";
+import TextBlock from "../TextBlock";
 
 function Home() {
   const navigate = useNavigate();
@@ -21,21 +23,33 @@ function Home() {
 
   const gotoAbout = () => goto("/about/");
 
+  /*
   const introText =
-    `I'm Ruben, an Audio Programmer based in Sweden. Currently studying Game Development at Stockholm University.
+    `I'm <b>Ruben</b>, an Audio Programmer based in Sweden. Currently studying Game Development at Stockholm University.
     
-    Yayaya fill this with info later...
+    I have a strong passion for creating immersive and unique audio experiences in games, and I specialize in implementing complex audio systems that enhance the overall gameplay experience.
+    
+    I have experience in using various DAWs (such as Reaper and FL Studio) for both sound design and music composition, and I enjoy working on all aspects of game audio, from creating sound effects to implementing complex audio systems via middleware such as FMOD.
     `
 
+    */
     //I specialize in creating robust developer tools and individual systems that enhance productivity, but I also enjoy working on gameplay features and mechanics.
 
   return (
     <>
       <div className="homeMain">
         <h1>Hello!</h1>
-        <img src={Selfie} alt="Selfie" className="selfie" />
-        <p className="textBlock">{introText}</p>
+        <div className="selfieContainer">
+          <img src={Selfie} alt="Selfie" className="selfie" />
+          <YoutubeEmbed embedId="Mq2UhdkExYY" width="560" height="315" />
+        </div>
+        <TextBlock style={{maxWidth:"1000px"}}>
+          <p>I'm <b>Ruben</b>, a <b>Game Audio Programmer</b> based in Sweden, Stockholm. Currently studying <b>Game Development</b> at <b>Stockholm University</b>.</p>
+          <br/>
+          <p>I have experience in using various <b>DAWs</b> (such as <b>Reaper</b> and <b>FL Studio</b>) for both <b>sound design</b> and <b>music composition</b>, and I enjoy working on all aspects of game audio, from creating sound effects to implementing complex audio systems via <b>middleware</b> such as <b>FMOD</b>.</p>
+        </TextBlock>
       </div>
+      {/*
       <Button
         onClick={gotoAbout}
         tooltip="What does this guy even do?"
@@ -44,6 +58,7 @@ function Home() {
       </Button>
 
       <br />
+      */}
       <br />
 
       <motion.div

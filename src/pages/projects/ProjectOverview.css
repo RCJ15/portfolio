@@ -1,9 +1,17 @@
+.projectsWrapper {
+  align-self: center;
+  padding-left: calc(50% - 500px);
+  max-width: 1000px;
+}
+
 .projects {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
+
+  max-width: 100%;
 
   gap: 30px;
   

@@ -22,18 +22,33 @@ function PortalPacker() {
 
           <TextBlock>
             <h2>Concept</h2>
-            <p>Portal packer is a <b>2D adventure/puzzle platformer</b> where you use <b>backpacks and portals</b> to escape an abandoned lab. It was created for the <b>2022 MashUp Game Jam</b>, where it won <b>1st place</b> out of 50 total entries.</p>
+            <p>Portal Packer is a <b>2D adventure/puzzle platformer</b> where you use <b>backpacks and portals</b> to escape an abandoned lab. It was created for the <b>2022 MashUp Game Jam</b>, where it won <b>1st place</b> out of 50 total entries.</p>
           </TextBlock>
 
           <TextBlock>
             <h2>My Role</h2>
-            <p>I created <b>everything</b> in the game, including <b>programming, art, design,</b> and <b>music</b> from scratch within the alloted time frame of <b>10 days.</b></p>
+            <p>I was the sole developer and thus created <b>everything</b> in the game, including <b>programming, art, design,</b> and <b>music</b> from scratch within the alloted time frame of <b>10 days.</b></p>
           </TextBlock>
 
         </div>
 
-        <h1>Core Pillars</h1>
+        <h1>Pillars</h1>
+          <div className="grid">
+          <TextBlock>
+            <h2>Hi-tech</h2>
+            <p>Since the primary mechanic of the game is a backpack that can create portals, the audio should reflect how futuristic the technology is.</p>
+            <br/>
+            <p>I achieved this by incorperating synths and pads into a lot of the sound design and music composition of the game.</p>
+          </TextBlock>
 
+          <TextBlock>
+            <h2>Abandoned</h2>
+            <p>Every aspect of the sound should give the player the feeling the area they are inside has been long abandoned.</p>
+            <br/>
+            <p>A lot of synths in the soundtrack are intentionally old and muted (via EQ) to make them sound "abandoned".</p>
+          </TextBlock>
+        </div>
+        {/*
         <div className="grid">
           <TextBlock>
             <h2>Responsiveness</h2>
@@ -63,13 +78,22 @@ function PortalPacker() {
             <img src={Gif4} alt="Gif 4" />
           </TextBlock>
         </div>
+        */}
 
+        {/*
         <h1>The Design</h1>
         <TextBlock>
           <h2>Goal</h2>
           My primary goal with the project was to create a polished and engaging game that was simple and fun to play and showcased my skills as a game developer.
         </TextBlock>
+        */}
         
+        <h1>Play the game!</h1>
+        <TextBlock>
+          <p>The game is up on <b>itch.io</b>! Playable directly in browser, no download required!</p>
+          <br/>
+          <iframe src="https://itch.io/embed/1747670?dark=true" width="552" height="167"><a href="https://rcj15.itch.io/portal-packer">Portal Packer by RCJ15</a></iframe>
+        </TextBlock>
       </ProjectPage>
     </>
   )

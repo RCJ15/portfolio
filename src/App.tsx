@@ -12,6 +12,7 @@ import GamesProjectOverview from "./pages/projects/games/GamesProjectOverview"
 import PortalPacker from "./pages/projects/games/PortalPacker";
 import BoxBreak from "./pages/projects/games/BoxBreak";
 import Debris from "./pages/projects/games/Debris";
+import PostalPanic from "./pages/projects/games/PostalPanic"
 import NighttimeVillage from "./pages/projects/other/NighttimeVillage";
 
 import Footer from "./Footer"
@@ -33,6 +34,7 @@ function App() {
           <Route path="/projects/games/portal-packer" element={<PortalPacker />} />
           <Route path="/projects/games/boxbreak" element={<BoxBreak />} />
           <Route path="/projects/games/debris" element={<Debris />} />
+          <Route path="/projects/games/postal-panic" element={<PostalPanic />} />
           <Route path="/projects/games/nighttime-village" element={<NighttimeVillage />} />
         </Routes>
 
