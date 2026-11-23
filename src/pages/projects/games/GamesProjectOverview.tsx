@@ -40,7 +40,7 @@ function gamesProjectOverview() {
 
         {/* POSTAL PANIC */}
         <ProjectPreview
-          title="Postal Panic!§"
+          title="Postal Panic!"
 
           subtitle="My latest and greatest work!"
           subtitleIcon="star"
